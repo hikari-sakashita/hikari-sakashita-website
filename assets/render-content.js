@@ -55,11 +55,12 @@
           ${x.image ? `<img src="${esc(x.image)}" alt="${esc(x.title || "")}" loading="lazy">` : ""}
         </div>
         <div class="schedule-copy">
-          ${x.date ? `<div class="schedule-date">${esc(x.date)}</div>` : ""}
           ${x.title ? `<div class="schedule-title">${esc(x.title)}</div>` : ""}
-          ${x.venue ? `<div class="schedule-venue">${esc(x.venue)}</div>` : ""}
-          ${x.text ? `<p class="schedule-text">${esc(x.text)}</p>` : ""}
-          ${x.url ? `<a class="schedule-link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">MORE INFO ↗</a>` : ""}
+          ${x.date ? `<div class="schedule-date">${esc(x.date)}</div>` : ""}
+          ${x.venue ? (x.url
+            ? `<div class="schedule-venue"><a href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">${esc(x.venue)} ↗</a></div>`
+            : `<div class="schedule-venue">${esc(x.venue)}</div>`) : ""}
+          ${x.type ? `<div class="schedule-type">(${esc(x.type)})</div>` : ""}
         </div>
       </article>
     `).join("");
