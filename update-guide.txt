@@ -1,0 +1,28 @@
+HIKARI SAKASHITA — EASY UPDATE VERSION
+
+【普段編集するファイル】
+assets/content.js
+
+ここだけで以下を更新できます。
+・TOPのお知らせ（NEWS）
+・PROFILE & BIOGRAPHY
+・SCHEDULE
+・DISCOGRAPHY
+・VIDEO
+・ACTIVITIES
+
+【基本ルール】
+1. "..." の中の文字を書き換える
+2. 項目を増やすときは、コメント内の例をコピーして追加
+3. enabled: true で表示
+4. enabled: false で非表示
+5. url: "" はリンクなし。URLを入れるとタイトルがリンクになります
+
+【注意】
+・カンマ , や引用符 " を消すと表示できなくなる場合があります。
+・assets/style.css はデザイン変更時以外、基本的に触らなくてOKです。
+・index.html などのHTMLも通常更新では触らなくてOKです。
+
+【公開前】
+このフォルダをNetlifyで再プレビューして、内容とスマホ表示を確認してください。
+独自ドメイン設定は、内容が完成してから行います。
