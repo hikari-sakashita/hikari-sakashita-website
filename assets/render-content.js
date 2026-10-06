@@ -39,6 +39,32 @@
     el.innerHTML = blocks.join("");
   }
 
+  function renderSchedule() {
+    const el = document.querySelector("[data-content='schedule']");
+    if (!el) return;
+    const rows = (data.schedule || []).filter(x => x.enabled !== false);
+
+    if (!rows.length) {
+      el.innerHTML = `<div class="empty-state">INFORMATION WILL BE UPDATED.</div>`;
+      return;
+    }
+
+    el.innerHTML = rows.map(x => `
+      <article class="schedule-item">
+        <div class="schedule-media">
+          ${x.image ? `<img src="${esc(x.image)}" alt="${esc(x.title || "")}" loading="lazy">` : ""}
+        </div>
+        <div class="schedule-copy">
+          ${x.date ? `<div class="schedule-date">${esc(x.date)}</div>` : ""}
+          ${x.title ? `<div class="schedule-title">${esc(x.title)}</div>` : ""}
+          ${x.venue ? `<div class="schedule-venue">${esc(x.venue)}</div>` : ""}
+          ${x.text ? `<p class="schedule-text">${esc(x.text)}</p>` : ""}
+          ${x.url ? `<a class="schedule-link" href="${esc(x.url)}" target="_blank" rel="noopener noreferrer">MORE INFO ↗</a>` : ""}
+        </div>
+      </article>
+    `).join("");
+  }
+
   function renderList(key) {
     const el = document.querySelector(`[data-content='${key}']`);
     if (!el) return;
@@ -63,5 +89,6 @@
 
   renderNews();
   renderProfile();
-  ["schedule","discography","video","activities"].forEach(renderList);
+  renderSchedule();
+  ["discography","video","activities"].forEach(renderList);
 })();

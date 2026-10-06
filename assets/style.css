@@ -142,3 +142,60 @@ footer{padding:20px var(--pad) 32px;font-size:9px;letter-spacing:.1em;color:var(
 .bio .profile-paragraph:last-child {
   margin-bottom: 0;
 }
+
+/* SCHEDULE — image left / text right, including iPhone */
+.schedule-item{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,1fr);
+  gap:clamp(28px,5vw,72px);
+  align-items:start;
+  padding:0 0 clamp(60px,8vw,100px);
+}
+.schedule-media{min-width:0}
+.schedule-media img{
+  display:block;
+  width:100%;
+  height:auto;
+}
+.schedule-copy{min-width:0}
+.schedule-date,
+.schedule-title,
+.schedule-venue,
+.schedule-text,
+.schedule-link{
+  font-size:14px;
+  line-height:1.9;
+  font-weight:400;
+  letter-spacing:.01em;
+}
+.schedule-date,
+.schedule-title,
+.schedule-venue,
+.schedule-text{margin:0 0 1.6em}
+.schedule-text{white-space:pre-line}
+.schedule-link{
+  display:inline-block;
+  border-bottom:1px solid currentColor;
+}
+.schedule-link:hover{opacity:.55}
+
+@media(max-width:760px){
+  .schedule-item{
+    grid-template-columns:minmax(0,40%) minmax(0,60%);
+    gap:18px;
+    padding-bottom:56px;
+  }
+  .schedule-date,
+  .schedule-title,
+  .schedule-venue,
+  .schedule-text,
+  .schedule-link{
+    font-size:11px;
+    line-height:1.75;
+  }
+  .schedule-date,
+  .schedule-title,
+  .schedule-venue,
+  .schedule-text{margin-bottom:1.25em}
+}
+
