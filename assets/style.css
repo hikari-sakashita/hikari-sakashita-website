@@ -94,3 +94,40 @@ footer{padding:20px var(--pad) 32px;font-size:9px;letter-spacing:.1em;color:var(
  .archive-item{grid-template-columns:1fr;gap:7px}
  .archive-sub{grid-column:1}
 }
+
+/* PROFILE & BIOGRAPHY TYPOGRAPHY PATCH
+   Upload this file as assets/style.css only if replacing the existing stylesheet.
+   This patch is intended to be appended to the current style.css.
+*/
+.bio,
+.bio p,
+.bio .profile-lead {
+  font-size: 14px;
+  line-height: 1.95;
+  font-weight: 400;
+  letter-spacing: 0.01em;
+}
+
+.bio p,
+.bio .profile-lead {
+  margin: 0 0 1.6em;
+}
+
+.bio p:last-child {
+  margin-bottom: 0;
+}
+
+.bio .profile-lead {
+  font-size: 14px;
+  line-height: 1.95;
+  margin-bottom: 2.6em;
+}
+
+@media (max-width: 760px) {
+  .bio,
+  .bio p,
+  .bio .profile-lead {
+    font-size: 14px;
+    line-height: 1.9;
+  }
+}
