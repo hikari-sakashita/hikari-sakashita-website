@@ -50,7 +50,15 @@ window.SITE_CONTENT = {
 },
 
   schedule: [
-    // { date: "2026.12.01", title: "EVENT TITLE", venue: "VENUE", url: "", enabled: true },
+    // {
+  title: "MOODS",
+  date: "2026.10.8",
+  venue: "Music Bar Journey",
+  url: "https://yokohamajourney.com",
+  type: "DJ",
+  image: "assets/images/schedule/moods-2026-10-08.jpeg",
+  enabled: true
+},
   ],
 
   discography: [
