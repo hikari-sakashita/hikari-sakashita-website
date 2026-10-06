@@ -12,7 +12,7 @@
 window.SITE_CONTENT = {
   news: [
     // 例:
-    // { date: "2026.10.06", title: "お知らせのタイトル", url: "", enabled: true },
+    // { date: "2026.10.06", title: "", url: "", enabled: true },
   ],
 
   profile: {
