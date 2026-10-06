@@ -113,10 +113,6 @@ footer{padding:20px var(--pad) 32px;font-size:9px;letter-spacing:.1em;color:var(
   margin: 0 0 1.6em;
 }
 
-.bio .profile-paragraph + .profile-section-heading {
-  margin-top: 2.6em;
-}
-
 .bio .profile-paragraph:last-child {
   margin-bottom: 0;
 }
@@ -127,4 +123,22 @@ footer{padding:20px var(--pad) 32px;font-size:9px;letter-spacing:.1em;color:var(
     font-size: 14px;
     line-height: 1.9;
   }
+}
+
+
+/* Final vertical rhythm normalization */
+.bio .profile-section-heading,
+.bio .profile-paragraph {
+  margin-top: 0;
+  margin-bottom: 1.6em;
+}
+
+.bio .profile-section-heading + .profile-paragraph,
+.bio .profile-paragraph + .profile-paragraph,
+.bio .profile-paragraph + .profile-section-heading {
+  margin-top: 0;
+}
+
+.bio .profile-paragraph:last-child {
+  margin-bottom: 0;
 }
